@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubaid Hostel - Rooms</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+header{
+background:#0F172A;
+color:white;
+padding:80px 8%;
+text-align:center;
+}
+
+header h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+.rooms{
+padding:60px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.room-card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.room-card:hover{
+transform:translateY(-8px);
+}
+
+.room-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.room-content{
+padding:25px;
+}
+
+.room-content h2{
+margin-bottom:10px;
+color:#0F172A;
+}
+
+.room-content p{
+color:#666;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+color:#0F172A;
+margin-bottom:20px;
+}
+
+.features{
+margin-bottom:20px;
+}
+
+.features li{
+list-style:none;
+padding:8px 0;
+color:#444;
+}
+
+.features i{
+color:#38BDF8;
+margin-right:10px;
+}
+
+.book-btn{
+width:100%;
+padding:14px;
+background:#38BDF8;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.book-btn:hover{
+background:#0284C7;
+}
+
+.facilities{
+padding:60px 8%;
+background:white;
+}
+
+.facilities h2{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#0F172A;
+}
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.facility{
+background:#f8fafc;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.facility i{
+font-size:40px;
+color:#38BDF8;
+margin-bottom:15px;
+}
+
+.back-home{
+display:block;
+width:220px;
+margin:50px auto;
+text-align:center;
+padding:15px;
+background:#0F172A;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+footer{
+background:#0F172A;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Our Hostel Rooms</h1>
+<p>Choose the room that best suits your comfort and budget</p>
+</header>
+
+<section class="rooms">
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+<div class="room-content">
+
+<h2>Single Room</h2>
+
+<p>
+Private room designed for students who prefer a peaceful environment.
+</p>
+
+<div class="price">
+4500 PKR / Month
+</div>
+
+<ul class="features">
+<li><i class="fas fa-check"></i> Attached Bathroom</li>
+<li><i class="fas fa-check"></i> Study Table</li>
+<li><i class="fas fa-check"></i> Wardrobe</li>
+<li><i class="fas fa-check"></i> WiFi Included</li>
+</ul>
+
+<button class="book-btn"
+onclick="bookRoom('Single Room')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+
+<div class="room-content">
+
+<h2>Double Sharing</h2>
+
+<p>
+Affordable accommodation with modern facilities.
+</p>
+
+<div class="price">
+3500 PKR / Month
+</div>
+
+<ul class="features">
+<li><i class="fas fa-check"></i> Shared Bathroom</li>
+<li><i class="fas fa-check"></i> Study Desk</li>
+<li><i class="fas fa-check"></i> High-Speed Internet</li>
+<li><i class="fas fa-check"></i> Daily Cleaning</li>
+</ul>
+
+<button class="book-btn"
+onclick="bookRoom('Double Sharing')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+
+<div class="room-content">
+
+<h2>Premium Suite</h2>
+
+<p>
+Luxury accommodation with enhanced facilities.
+</p>
+
+<div class="price">
+5000 PKR / Month
+</div>
+
+<ul class="features">
+<li><i class="fas fa-check"></i> Attached Bathroom</li>
+<li><i class="fas fa-check"></i> Air Conditioning</li>
+<li><i class="fas fa-check"></i> Premium Furniture</li>
+<li><i class="fas fa-check"></i> Private Study Area</li>
+</ul>
+
+<button class="book-btn"
+onclick="bookRoom('Premium Suite')">
+Book Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="facilities">
+
+<h2>Included Facilities</h2>
+
+<div class="facility-grid">
+
+<div class="facility">
+<i class="fas fa-wifi"></i>
+<h3>Free WiFi</h3>
+</div>
+
+<div class="facility">
+<i class="fas fa-shield-alt"></i>
+<h3>24/7 Security</h3>
+</div>
+
+<div class="facility">
+<i class="fas fa-utensils"></i>
+<h3>Mess Facility</h3>
+</div>
+
+<div class="facility">
+<i class="fas fa-book"></i>
+<h3>Study Area</h3>
+</div>
+
+</div>
+
+</section>
+
+<a href="index.html" class="back-home">
+Back To Home
+</a>
+
+<footer>
+© 2026 Ubaid Hostel Management System
+</footer>
+
+<script>
+
+function bookRoom(room)
+{
+alert(room + " selected successfully!");
+}
+
+</script>
+
+</body>
+</html>
